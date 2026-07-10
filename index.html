@@ -201,9 +201,38 @@
   }
   .btn-ghost:hover{border-color:var(--charcoal);}
 
+  .hero-right{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:22px;
+  }
+
+  .portrait-frame{
+    width:min(190px, 100%);
+    border:2px solid var(--charcoal);
+    background:var(--paper-dim);
+    position:relative;
+  }
+  .portrait-frame img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    object-position:center 20%;
+    display:block;
+  }
+  .portrait-tag{
+    background:var(--charcoal);
+    color:var(--paper);
+    font-size:0.66rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    text-align:center;
+    padding:8px 4px;
+  }
+
   /* the "permit stamp" signature element */
   .permit{
-    justify-self:end;
     border:2px solid var(--charcoal);
     padding:22px 24px;
     width:min(280px, 100%);
@@ -239,7 +268,7 @@
 
   @media (max-width:820px){
     .hero-inner{grid-template-columns:1fr;}
-    .permit{justify-self:start;}
+    .hero-right{align-items:flex-start;}
   }
 
   /* ---------- SERVICES STRIP ---------- */
@@ -509,15 +538,21 @@
           <a class="btn-ghost" href="#about">See our work</a>
         </div>
       </div>
-      <div class="permit">
-        <div class="permit-title">Project Snapshot</div>
-        <dl>
-          <div class="permit-row"><dt>Status</dt><dd>Accepting bids</dd></div>
-          <div class="permit-row"><dt>Region</dt><dd>Tri-County Area</dd></div>
-          <div class="permit-row"><dt>Crew size</dt><dd>4–40</dd></div>
-          <div class="permit-row"><dt>Insured</dt><dd>Yes, bonded</dd></div>
-          <div class="permit-row"><dt>Est. reply</dt><dd>Within 24h</dd></div>
-        </dl>
+      <div class="hero-right">
+        <div class="portrait-frame">
+          <img src="assets/owner-photo.png" alt="Owner and site lead of Bedrock & Beam Construction">
+          <div class="portrait-tag mono">Owner / Site Lead</div>
+        </div>
+        <div class="permit">
+          <div class="permit-title">Project Snapshot</div>
+          <dl>
+            <div class="permit-row"><dt>Status</dt><dd>Accepting bids</dd></div>
+            <div class="permit-row"><dt>Region</dt><dd>Tri-County Area</dd></div>
+            <div class="permit-row"><dt>Crew size</dt><dd>4–40</dd></div>
+            <div class="permit-row"><dt>Insured</dt><dd>Yes, bonded</dd></div>
+            <div class="permit-row"><dt>Est. reply</dt><dd>Within 24h</dd></div>
+          </dl>
+        </div>
       </div>
     </div>
   </section>
